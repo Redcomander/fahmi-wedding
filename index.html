@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wedding of Adinda & Fahmi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=2" />
+    <!-- FontAwesome for elegant icons instead of emojis -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cover/Opening Screen -->
+    <div id="cover-screen" class="cover-screen">
+      <div class="floral-corner top-left"></div>
+      <div class="floral-corner bottom-right"></div>
+
+      <div class="cover-content">
+        <div class="pre-title">The Wedding Of</div>
+        <h1 class="couple-names-cover">Adinda & Fahmi</h1>
+
+        <div class="guest-info">
+          <p>Kepada Yth.</p>
+          <div id="guest-name" class="guest-name-disp">Tamu Undangan</div>
+          <p class="guest-note">
+            Mohon maaf apabila ada kesalahan penulisan nama/gelar.
+          </p>
+        </div>
+
+        <button id="btn-open" class="btn-primary btn-open">
+          <i class="fa-solid fa-envelope-open-text"></i> Buka Undangan
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+      <!-- Floating Music Button -->
+      <button id="btn-music" class="btn-floating">
+        <i class="fa-solid fa-music"></i>
+      </button>
+      <!-- Audio -->
+      <audio id="bg-music" loop>
+        <source
+          src="https://assets.mixkit.co/music/preview/mixkit-wedding-march-1-667.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+
+      <!-- Section: Hero/Intro -->
+      <section id="hero" class="section hero-section animate-on-scroll">
+        <div class="floral-corner top-left"></div>
+        <div class="floral-corner bottom-right"></div>
+
+        <div class="hero-inner">
+          <span class="save-the-date">Save The Date</span>
+          <h1 class="couple-names-hero">Adinda & Fahmi</h1>
+          <p class="wedding-date">Rabu, 25 Maret 2026</p>
+
+          <div class="countdown-container">
+            <div class="countdown-item">
+              <span id="cd-days">00</span>
+              <span>Hari</span>
+            </div>
+            <div class="countdown-item">
+              <span id="cd-hours">00</span>
+              <span>Jam</span>
+            </div>
+            <div class="countdown-item">
+              <span id="cd-minutes">00</span>
+              <span>Menit</span>
+            </div>
+            <div class="countdown-item">
+              <span id="cd-seconds">00</span>
+              <span>Detik</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Bismillah & Quote -->
+      <section id="intro" class="section intro-section animate-on-scroll">
+        <img
+          src="assets/images/floral-divider.png"
+          alt="divider"
+          class="floral-divider divider-top"
+        />
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+        <p class="greeting">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="intro-text">
+          Maha Suci Allah SWT, yang telah menciptakan makhluk-Nya
+          berpasangan-pasangan. Ya Allah semoga ridho-Mu Tercurah mengiringi
+          pernikahan putra-putri kami:
+        </p>
+
+        <img
+          src="assets/images/floral-divider.png"
+          alt="divider"
+          class="floral-divider divider-bottom"
+        />
+      </section>
+
+      <!-- Section: Couple -->
+      <section id="couple" class="section couple-section animate-on-scroll">
+        <h2 class="section-title">Mempelai</h2>
+
+        <div class="couple-container">
+          <!-- Bride -->
+          <div class="person bride animate-on-scroll delay-1">
+            <h3 class="person-name">Adinda Frestiani Setiawan</h3>
+            <p class="person-parent">Putri Ke-2 dari</p>
+            <p class="parent-names">Bapak Yana Suryana & Ibu Neng Ika</p>
+          </div>
+
+          <div class="ampersand animate-on-scroll delay-2">&</div>
+
+          <!-- Groom -->
+          <div class="person groom animate-on-scroll delay-3">
+            <h3 class="person-name">Fahmi Hasan Bisri, S.H</h3>
+            <p class="person-parent">Putra Ke-5 dari</p>
+            <p class="parent-names">Bapak H. Makoli & Ibu Hj. Tinah</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Events -->
+      <section id="events" class="section events-section animate-on-scroll">
+        <h2 class="section-title">Acara Pernikahan</h2>
+        <p class="events-intro">
+          Dengan memohon Rahmat dan Ridho Allah SWT, kami bermaksud
+          menyelenggarakan resepsi pernikahan putra-putri kami yang Insya Allah
+          akan di selenggarakan pada:
+        </p>
+
+        <div class="cards-container">
+          <!-- Akad -->
+          <div class="event-card animate-on-scroll">
+            <i class="fa-solid fa-ring event-icon"></i>
+            <h3 class="event-title">Akad Nikah</h3>
+            <div class="event-detail">
+              <i class="fa-regular fa-calendar-alt"></i>
+              <p>Rabu, 25 Maret 2026</p>
+            </div>
+            <div class="event-detail">
+              <i class="fa-regular fa-clock"></i>
+              <p>10.00 WIB - Selesai</p>
+            </div>
+          </div>
+
+          <!-- Resepsi -->
+          <div class="event-card animate-on-scroll delay-1">
+            <i class="fa-solid fa-champagne-glasses event-icon"></i>
+            <h3 class="event-title">Resepsi</h3>
+            <div class="event-detail">
+              <i class="fa-regular fa-calendar-alt"></i>
+              <p>Rabu, 25 Maret 2026</p>
+            </div>
+            <div class="event-detail">
+              <i class="fa-regular fa-clock"></i>
+              <p>08.00 WIB - Selesai</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-container animate-on-scroll">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <h3 class="location-title">Lokasi Acara</h3>
+          <p class="location-address">
+            Kp. Cibuntu RT 02/RW 27 Ds. Sukamanah Kec. Rongga Bandung Barat
+          </p>
+
+          <div class="map-wrapper">
+            <!-- Google Maps Embed -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.865328822986!2d107.3101!3d-7.0125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDAnNDUuMCJTIDEwN8KwMTgnMzYuNCJF!5e0!3m2!1sen!2sid!4v1634567890123!5m2!1sen!2sid"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <a
+            href="https://maps.google.com/?q=-7.0125,107.3101"
+            target="_blank"
+            class="btn-outline"
+          >
+            <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Family/Pengundang -->
+      <section id="family" class="section family-section animate-on-scroll">
+        <h2 class="section-title">Turut Mengundang</h2>
+
+        <div class="family-lists">
+          <div class="family-group">
+            <h4 class="family-side">Mempelai Wanita</h4>
+            <ul>
+              <li>Bapak Ust. M. Hendarzakariyya</li>
+              <li>Ibu Enung</li>
+              <li>Bapak Asep</li>
+              <li>Bapak Dani</li>
+              <li>Abah Pendi</li>
+              <li>Dede Iwan Setiawan</li>
+            </ul>
+          </div>
+
+          <div class="family-group">
+            <h4 class="family-side">Mempelai Pria</h4>
+            <ul>
+              <li>
+                Kel. Besar Dewan Guru Ponpes. Tahfids Ibnu Hafidz - Subang
+              </li>
+              <li>Kel. Besar Yayasan Midad Kalimat Rabbi</li>
+              <li>Kel. Besar Ponpes. Dar Al-Tauhid - Cirebon</li>
+              <li>Kel. Besar Ponpes Lema Duwur - Cirebon</li>
+              <li>Dr. (HC) KH. Husein Muhammad (Pembina Fahmina Institut)</li>
+              <li>KH. M. Musthofa (Ketua PCNU Kab. Indramayu)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Digital Gift / Rekening -->
+      <section id="gift" class="section gift-section animate-on-scroll">
+        <img
+          src="assets/images/floral-divider.png"
+          alt="divider"
+          class="floral-divider divider-top"
+        />
+
+        <h2 class="section-title">Digital Gift</h2>
+        <p class="gift-desc">
+          Bagi keluarga dan sahabat yang ingin memberikan tanda kasih, dapat
+          mengirimkannya melalui:
+        </p>
+
+        <div class="gift-container">
+          <!-- BRI -->
+          <div class="gift-card animate-on-scroll">
+            <h3 class="bank-name">Bank BRI</h3>
+            <p class="account-number" id="rek-bri">4238 0102 0026 532</p>
+            <p class="account-name">a.n Fahmi</p>
+            <button
+              class="btn-copy"
+              onclick="copyText('423801020026532', this)"
+            >
+              <i class="fa-regular fa-copy"></i> Salin Rekening
+            </button>
+          </div>
+
+          <!-- DANA -->
+          <div class="gift-card animate-on-scroll delay-1">
+            <h3 class="bank-name">DANA</h3>
+            <p class="account-number" id="rek-dana">0838 2041 8788</p>
+            <p class="account-name">a.n Adinda Fristyani</p>
+            <button class="btn-copy" onclick="copyText('083820418788', this)">
+              <i class="fa-regular fa-copy"></i> Salin Nomor
+            </button>
+          </div>
+
+          <!-- BSI -->
+          <div class="gift-card animate-on-scroll delay-2">
+            <h3 class="bank-name">Bank BSI</h3>
+            <p class="account-number" id="rek-bsi">7331 2278 59</p>
+            <p class="account-name">a.n Adinda Fristyani</p>
+            <button class="btn-copy" onclick="copyText('7331227859', this)">
+              <i class="fa-regular fa-copy"></i> Salin Rekening
+            </button>
+          </div>
+        </div>
+
+        <p class="gift-thanks animate-on-scroll delay-1">
+          Terima kasih atas doa dan tanda kasih yang diberikan.
+        </p>
+      </section>
+
+      <!-- Section: RSVP -->
+      <section id="rsvp" class="section rsvp-section animate-on-scroll">
+        <div class="rsvp-card">
+          <h2 class="section-title">Konfirmasi Kehadiran</h2>
+          <p class="rsvp-desc">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak /
+            Ibu / Saudara (i) berkenan hadir.
+          </p>
+
+          <form id="rsvp-form" class="rsvp-form">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Masukkan nama Anda"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="attendance">Kehadiran</label>
+              <select id="attendance" name="attendance" required>
+                <option value="">Pilih status kehadiran</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+                <option value="Masih Ragu">Masih Ragu</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Jumlah Tamu</label>
+              <select id="guests" name="guests" required>
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-primary w-100">
+              <i class="fa-regular fa-paper-plane"></i> Kirim Konfirmasi
+            </button>
+            <div id="rsvp-status" class="form-status hidden"></div>
+          </form>
+
+          <div id="rsvp-stats-container" class="animate-on-scroll">
+            <!-- Stats will be injected here by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Wishes -->
+      <section id="wishes" class="section wishes-section animate-on-scroll">
+        <h2 class="section-title">Ucapkan Sesuatu</h2>
+        <p class="wishes-desc">Berikan doa dan harapan untuk kedua mempelai.</p>
+
+        <div class="wishes-container">
+          <form id="wishes-form" class="wishes-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="wish-name"
+                name="wish-name"
+                required
+                placeholder="Nama Anda"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="wish-message"
+                name="wish-message"
+                rows="4"
+                required
+                placeholder="Tulis doa & harapan Anda..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-outline w-100">
+              <i class="fa-solid fa-comment-dots"></i> Kirim Ucapan
+            </button>
+          </form>
+
+          <div class="wishes-list" id="wishes-list">
+            <!-- Default Wishes -->
+            <div class="wish-item">
+              <div class="wish-header">
+                <strong>Keluarga Besar</strong>
+                <span class="wish-badge">Hadir</span>
+              </div>
+              <p class="wish-text">
+                Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.
+                Aamiin.
+              </p>
+              <span class="wish-time">Beberapa saat yang lalu</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-text">
+          Atas kehadiran dan do'a restunya kami ucapkan terimakasih.
+        </p>
+        <p class="footer-greeting">
+          Wassalamu'alaikum Warahmatullahi Wabarakatuh
+        </p>
+        <h2 class="couple-names-footer">Adinda & Fahmi</h2>
+
+        <div class="admin-toggle">
+          <a href="admin.html" id="btn-admin-login"
+            ><i class="fa-solid fa-lock"></i> Admin Dashboard</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js?v=2"></script>
+  </body>
+</html>
