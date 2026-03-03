@@ -209,13 +209,13 @@
         <div class="result-text" id="resultUrl">
           https://example.com/index.html?to=
         </div>
-        <button class="btn-copy-sm" id="btnCopyUrl">
+        <button type="button" class="btn-copy-sm" id="btnCopyUrl">
           <i class="fa-regular fa-copy"></i>
         </button>
       </div>
 
       <div class="buttons">
-        <button class="btn-primary" id="btnWhatsApp">
+        <button type="button" class="btn-primary" id="btnWhatsApp">
           <i class="fa-brands fa-whatsapp"></i> Bagikan WA
         </button>
         <a
@@ -240,10 +240,20 @@
         const btnPreview = document.getElementById("btnPreview");
         const toast = document.getElementById("toast");
 
-        // Base URL of your website (adjust if hosting on actual standard domain)
-        const baseUrl =
-          window.location.origin +
-          window.location.pathname.replace("generator.html", "index.html");
+        // Base URL of your website - works on localhost AND Netlify/Vercel
+        const getBaseUrl = () => {
+          const origin = window.location.origin;
+          let path = window.location.pathname;
+          // Remove generator.html or generator from the path
+          path = path.replace(/generator(\.html)?$/i, "index.html");
+          // If path doesn't end with index.html, append it
+          if (!path.endsWith("index.html")) {
+            if (!path.endsWith("/")) path += "/";
+            path += "index.html";
+          }
+          return origin + path;
+        };
+        const baseUrl = getBaseUrl();
 
         // Initial render
         resultUrl.textContent = baseUrl;
@@ -264,7 +274,8 @@
         });
 
         // Copy URL logic
-        btnCopyUrl.addEventListener("click", () => {
+        btnCopyUrl.addEventListener("click", (e) => {
+          e.preventDefault();
           const url = resultUrl.textContent;
           navigator.clipboard.writeText(url).then(() => {
             toast.classList.add("show");
@@ -273,7 +284,8 @@
         });
 
         // WhatsApp Message Template
-        btnWhatsApp.addEventListener("click", () => {
+        btnWhatsApp.addEventListener("click", (e) => {
+          e.preventDefault();
           const name = guestNameInput.value.trim() || "Tamu Undangan";
           const url = resultUrl.textContent;
 

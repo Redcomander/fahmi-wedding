@@ -155,13 +155,13 @@ button {
 .top-left {
     top: 0;
     left: 0;
-    background-image: url('assets/images/floral-top-left.png');
+    background-image: url('assets/images/floral-top-left.png?v=2');
 }
 
 .bottom-right {
     bottom: 0;
     right: 0;
-    background-image: url('assets/images/floral-bottom-right.png');
+    background-image: url('assets/images/floral-bottom-right.png?v=2');
 }
 
 .floral-divider {
